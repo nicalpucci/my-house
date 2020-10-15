@@ -65,7 +65,45 @@ public class Picture
         sun.makeVisible();
         sun.slowMoveVertical(-50);
     }
+    /**
+     * Atardecer
+     */
+    public void sunset()
+    {  
+        horizon = new Square();
+        horizon.changeColor("green");
+        horizon.moveHorizontal(-330);
+        horizon.moveVertical(110);
+        horizon.changeSize(550);
+        horizon.makeVisible();
+        
+        wall = new Square();
+        wall.moveHorizontal(-140);
+        wall.moveVertical(20);
+        wall.changeSize(120);
+        wall.makeVisible();
+        
+        window = new Square();
+        window.changeColor("black");
+        window.moveHorizontal(-120);
+        window.moveVertical(40);
+        window.changeSize(40);
+        window.makeVisible();
 
+        roof = new Triangle();  
+        roof.changeSize(60, 180);
+        roof.moveHorizontal(20);
+        roof.moveVertical(-60);
+        roof.makeVisible();
+
+        sun = new Circle();
+        sun.changeColor("yellow");
+        sun.moveHorizontal(100);
+        sun.moveVertical(-200);
+        sun.changeSize(80);
+        sun.makeVisible();
+        sun.slowMoveVertical(200);
+    }
     /**
      * Change this picture to black/white display
      */
